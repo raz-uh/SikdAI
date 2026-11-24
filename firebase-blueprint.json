@@ -1,0 +1,51 @@
+{
+  "entities": {
+    "users": {
+      "title": "User Profile",
+      "description": "User profiles for Students and Teachers",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "role": { "type": "string", "enum": ["student", "teacher"] },
+        "grade": { "type": "number" },
+        "subjectSpecialization": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["uid", "email", "role"]
+    },
+    "saved_notes": {
+      "title": "Saved Study Notes",
+      "description": "Notes saved by students and teachers",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "grade": { "type": "number" },
+        "subject": { "type": "string" },
+        "question": { "type": "string" },
+        "simpleAnswer": { "type": "string" },
+        "stepByStepExplanation": { "type": "string" },
+        "practiceQuestion": { "type": "string" },
+        "practiceAnswer": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["userId", "grade", "subject", "question"]
+    },
+    "study_materials": {
+      "title": "Teacher Study Materials",
+      "description": "Study guides, practice sets, and notes published by teachers for students",
+      "type": "object",
+      "properties": {
+        "teacherId": { "type": "string" },
+        "teacherName": { "type": "string" },
+        "title": { "type": "string" },
+        "grade": { "type": "number" },
+        "subject": { "type": "string" },
+        "content": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["teacherId", "title", "grade", "subject", "content"]
+    }
+  }
+}

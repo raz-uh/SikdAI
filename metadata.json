@@ -1,0 +1,8 @@
+{
+  "name": "SikdAI",
+  "description": "Nepal Curriculum Development Centre (CDC) Virtual Tutor for Grades 1 to 10 in Nepali",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
